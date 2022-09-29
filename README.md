@@ -1,2 +1,3 @@
-# Credit-Risk
+# Credit Risk Analysis
+
 Supervised Machine Learning
