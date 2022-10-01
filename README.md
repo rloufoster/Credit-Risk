@@ -19,11 +19,11 @@ Using the credit card credit dataset from LendingClub, a peer-to-peer lending se
 
 The original dataset contained 115,675 loan applications in Q1 of 2019. We used the "loan status" to determine whether the application was considered "low" or "high" risk. Applications that had "current" as the "loan status" were classified as "low risk" and the remaining as "high risk". This reduced the dataset to 68,817 total applications with 99% classified as "low risk".
 
-![datacount]()
+![datacount](https://github.com/rloufoster/Credit_Risk_Analysis/blob/main/Images/datacount.png?raw=true)
 
 Using the 75/25% method to split the data for training vs. testing, 51,366 "low risk" and 246 "high risk" applications were categorized into the training set.   
 
-![trainingdata]()
+![trainingdata](https://github.com/rloufoster/Credit_Risk_Analysis/blob/main/Images/trainingdata.png?raw=true)
 
 
 ### Deliverable 1 - Use Resampling Models to Predict Credit Risk
@@ -32,49 +32,49 @@ Using the 75/25% method to split the data for training vs. testing, 51,366 "low 
 
 -RandomOverSampler randomly selects from the minority class and adds it to the training set until both classifications are equal.  The results classified **51,366** records each as High Risk and Low Risk.
 
-![oversamplecount]()
+![oversamplecount](https://github.com/rloufoster/Credit_Risk_Analysis/blob/main/Images/oversamplecount.png?raw=true)
 
    * Balanced accuracy score:  64%
    
-   ![oversampleacc]()
+   ![oversampleacc](https://github.com/rloufoster/Credit_Risk_Analysis/blob/main/Images/oversampleacc.png?raw=true)
    
    * The "High Risk" precision rate was only 1% with the recall at 66% giving this model an F1 score of 2%.
    * The "Low Risk" had a precision rate of 100% and recall of 62%.
    
-   ![oversamplecm]()
+   ![oversamplecm](https://github.com/rloufoster/Credit_Risk_Analysis/blob/main/Images/oversamplecm.png?raw=true)
    
-   ![oversampleclass]()
+   ![oversampleclass](https://github.com/rloufoster/Credit_Risk_Analysis/blob/main/Images/oversampleclass.png?raw=true)
 
 -SMOTE (Synthetic Minority Oversampling Technique) Model, like RandomOverSampler, increases the size of the minority class by creating new values based on the value of the closest neighbors to the minority class instead of random selection.
 
    * Balanced accuracy score improved slightly to 65.1%.
    
-   ![smoteacc]()
+   ![smoteacc](https://github.com/rloufoster/Credit_Risk_Analysis/blob/main/Images/Smoteacc.png?raw=true)
    
    * Like RandomOverSampler, the "High Risk" precision rate again was only 1% with the recall degraded to 61% giving this model an F1 score      of 2%.
    * The "Low Risk" had a precision rate of 100% and an improved recall at 69%.
    
-   ![smotecm]()
+   ![smotecm](https://github.com/rloufoster/Credit_Risk_Analysis/blob/main/Images/SmoteCM.png?raw=true)
    
-   ![smoteclass]()
+   ![smoteclass](https://github.com/rloufoster/Credit_Risk_Analysis/blob/main/Images/SmoteClass.png?raw=true)
    
 
 **Undersampling**
 
 -ClusterCentroids Model is an algorithm that identifies clussters of the majority class to generate synthetic data points that are representative of the clusters.  The model classified 246 records each as High RIsk and Low Risk.
 
-![undersamplecount]()
+![undersamplecount](https://github.com/rloufoster/Credit_Risk_Analysis/blob/main/Images/undersamplecount.png?raw=true)
 
    * Balanced accuracy score was lower than the oversampling models at 54.5%.
    
-   ![underacc]()
+   ![underacc](https://github.com/rloufoster/Credit_Risk_Analysis/blob/main/Images/underacc.png?raw=true)
    
    * The "High Risk" precision rate again was only at 1% with the recall at 69% giving this model an F1 score of 1%.
    * The "Low Risk" had a precision rte of 100% and with a lower recal at 40% compared to the oversampling models.
    
-   ![undercm]()
+   ![undercm](https://github.com/rloufoster/Credit_Risk_Analysis/blob/main/Images/undercm.png?raw=true)
    
-   ![underclass]()
+   ![underclass](https://github.com/rloufoster/Credit_Risk_Analysis/blob/main/Images/underclass.png?raw=true)
    
 ### Deliverable 2 - Use the SMOTEENN algorithm to Predict Credit Risk
 
@@ -82,54 +82,54 @@ Using the 75/25% method to split the data for training vs. testing, 51,366 "low 
 
 -SMOTEENN (Synthetic Minority Oversampling Technique + Edited NearestNeighbors) Model is a combination of aspects of both oversampling and undersampling. The model classified **66,460** records as High Risk and **62,011** as Low Risk.
 
-![SMOTEENNcount]()
+![SMOTEENNcount](https://github.com/rloufoster/Credit_Risk_Analysis/blob/main/Images/SMOTEENNcount.png?raw=true)
 
    * The balanced accuracy score improved to 64.5% when using the combined sampling model.
    
-   ![SMOTEENNacc]()
+   ![SMOTEENNacc](https://github.com/rloufoster/Credit_Risk_Analysis/blob/main/Images/SMOTEENNacc.png?raw=true)
    
    * The "High Risk" precision rate did not improve at only 1%, however the recall increased to 72% giving this model an F1 score of 2%.
    * The "Low Risk" still showed a precision rate of 100% with the recall at 57%.
    
-   ![SMOTEENNcm]()
+   ![SMOTEENNcm](https://github.com/rloufoster/Credit_Risk_Analysis/blob/main/Images/SMOTEENNcm.png?raw=true)
    
-   ![SMOTEENNclass]()
+   ![SMOTEENNclass](https://github.com/rloufoster/Credit_Risk_Analysis/blob/main/Images/SMOTEENNclass.png?raw=true)
    
 
 ### Deliverable 3 - Use Ensemble Classifiers to Predict Credit Risk
 
 Compare two new Machine Learning models that reduce bias to predict credit risk.  The models classified **51,366** as High Risk and 246 as Low Risk.
 
-![Balancedcount]()
+![Balancedcount](https://github.com/rloufoster/Credit_Risk_Analysis/blob/main/Images/balancedcount.png?raw=true)
 
 -BalancedRandomForestClassifier Model, two decison trees of equal size to the minority class are created.  One to represent the majority class and the other to represent the minority class. 
 
    * The balanced accuracy score increased to 78.9% for this model.
    
-   ![balanceacc]()
+   ![balanceacc](https://github.com/rloufoster/Credit_Risk_Analysis/blob/main/Images/Balancedacc.png?raw=true)
    
    * The "High Risk" precision rate increased to 3% with the recall at 70% giving this model an F1 score of 6%.
    * The "Low Risk" still had a precision rate of 100% with the recall at 87%.
    * The top feature by importance was "total_rec_prncp" at 7,9% of the total.
    
-   ![balancecm]()
+   ![balancecm](https://github.com/rloufoster/Credit_Risk_Analysis/blob/main/Images/Balancedcm.png?raw=true)
    
-   ![balanceclass]()
+   ![balanceclass](https://github.com/rloufoster/Credit_Risk_Analysis/blob/main/Images/balancedclass.png?raw=true)
    
-   ![balancefeature]()
+   ![balancefeature](https://github.com/rloufoster/Credit_Risk_Analysis/blob/main/Images/BalancedFeature.png?raw=true)
    
 -EasyEnsembleClassifier Model is a set of classifiers where individual decision are combined to classify new examples.
 
    * The balanced accuracy score increased to 93.2% with this model.
    
-   ![easyacc]()
+   ![easyacc](https://github.com/rloufoster/Credit_Risk_Analysis/blob/main/Images/Easyacc.png?raw=true)
    
    * The "High Risk precision rate increased to 9% with the recall at 92% giving this model an F1 score of 16%.
    * The "Low Risk" still had a precision rate of 100% with the recall now at 94%.
    
-   ![easycm]()
+   ![easycm](https://github.com/rloufoster/Credit_Risk_Analysis/blob/main/Images/Easycm.png?raw=true)
   
-   ![easyclass]()
+   ![easyclass](https://github.com/rloufoster/Credit_Risk_Analysis/blob/main/Images/Easyclass.png?raw=true)
    
    
 ## Summary
