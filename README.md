@@ -134,7 +134,7 @@ Compare two new Machine Learning models that reduce bias to predict credit risk.
    
 ## Summary
 
-In reviewing all six models, the `EasyEnsembleClassifer` model yielded the best results with an accuracy rate of 93.2% and a 9% precision rate when predicting "High Risk candidates. The sensitivity rate (aka recall) was also the highest at 92% compared to the other models. The result for predicting "Low Risk" was also the highest with the sensitivity rate at 94% and an F1 score of 97%. Therefore, if a model needed to be recommended to perform this type of analysis, then this one would be the clear choice.
+After exploring the six models, the EasyEnsembleClassifer model provided the best results with an accuracy rate of 93.2% and a 9% precision rate when predicting "High Risk" candidates. The recall rate was also the highest at 92% compared to the other models. The result for predicting "Low Risk" was also the highest with the recall rate at 94% and an F1 score of 97%. Therefore, if a model needed to be recommended to perform this type of analysis, this would be the apparent choice.
 
 **Ranking of models in descending order based on "High Risk" results:**
 
